@@ -4,58 +4,58 @@
 :vpi_module "system";
 :vpi_module "v2005_math";
 :vpi_module "va_math";
-S_01138768 .scope module, "is_prime_gates_tb" "is_prime_gates_tb" 2 3;
+S_010630F8 .scope module, "is_prime_gates_tb" "is_prime_gates_tb" 2 3;
  .timescale 0 0;
-v01133260_0 .var "cba", 2 0;
-v01133AF0_0 .net "prime", 0 0, L_01133BF0; 1 drivers
-L_0113ED18 .part v01133260_0, 2, 1;
-L_0113ED70 .part v01133260_0, 1, 1;
-L_0113EDC8 .part v01133260_0, 0, 1;
-S_01137BB8 .scope module, "DUT_IPG" "is_prime_gates" 2 7, 3 8, S_01138768;
+v0102EAC0_0 .var "cba", 2 0;
+v0102EB18_0 .net "prime", 0 0, L_0102EC18; 1 drivers
+L_0108A540 .part v0102EAC0_0, 2, 1;
+L_0108AB70 .part v0102EAC0_0, 1, 1;
+L_0108A9B8 .part v0102EAC0_0, 0, 1;
+S_01063010 .scope module, "DUT_IPG" "is_prime_gates" 2 7, 3 8, S_010630F8;
  .timescale 0 0;
-L_00FA36F0 .functor NOT 1, L_0113ED18, C4<0>, C4<0>, C4<0>;
-L_011332B8 .functor AND 1, L_00FA36F0, L_0113ED70, C4<1>, C4<1>;
-L_01133B80 .functor AND 1, L_0113ED18, L_0113EDC8, C4<1>, C4<1>;
-L_01133BF0 .functor OR 1, L_011332B8, L_01133B80, C4<0>, C4<0>;
-v00FA3460_0 .alias "P", 0 0, v01133AF0_0;
-v00FA3348_0 .net *"_s0", 0 0, L_00FA36F0; 1 drivers
-v00FA3260_0 .net *"_s2", 0 0, L_011332B8; 1 drivers
-v00FA28D8_0 .net *"_s4", 0 0, L_01133B80; 1 drivers
-v00FA3698_0 .net "a", 0 0, L_0113EDC8; 1 drivers
-v011331B0_0 .net "b", 0 0, L_0113ED70; 1 drivers
-v01133208_0 .net "c", 0 0, L_0113ED18; 1 drivers
-    .scope S_01138768;
+L_01022C50 .functor NOT 1, L_0108A540, C4<0>, C4<0>, C4<0>;
+L_01023550 .functor AND 1, L_01022C50, L_0108AB70, C4<1>, C4<1>;
+L_0102EBA8 .functor AND 1, L_0108A540, L_0108A9B8, C4<1>, C4<1>;
+L_0102EC18 .functor OR 1, L_01023550, L_0102EBA8, C4<0>, C4<0>;
+v01023448_0 .alias "P", 0 0, v0102EB18_0;
+v010234A0_0 .net "a", 0 0, L_0108A9B8; 1 drivers
+v010234F8_0 .net "b", 0 0, L_0108AB70; 1 drivers
+v01022B48_0 .net "c", 0 0, L_0108A540; 1 drivers
+v01022BA0_0 .net "d", 0 0, L_01022C50; 1 drivers
+v01022BF8_0 .net "e", 0 0, L_01023550; 1 drivers
+v0102EA68_0 .net "f", 0 0, L_0102EBA8; 1 drivers
+    .scope S_010630F8;
 T_0 ;
     %vpi_call 2 10 "$dumpfile", "is_prime_gates.vcd";
-    %vpi_call 2 11 "$dumpvars", 1'sb0, S_01138768;
-    %set/v v01133260_0, 0, 3;
+    %vpi_call 2 11 "$dumpvars", 1'sb0, S_010630F8;
+    %set/v v0102EAC0_0, 0, 3;
     %delay 1, 0;
     %movi 8, 1, 3;
-    %set/v v01133260_0, 8, 3;
+    %set/v v0102EAC0_0, 8, 3;
     %delay 1, 0;
     %movi 8, 2, 3;
-    %set/v v01133260_0, 8, 3;
+    %set/v v0102EAC0_0, 8, 3;
     %delay 1, 0;
     %movi 8, 3, 3;
-    %set/v v01133260_0, 8, 3;
+    %set/v v0102EAC0_0, 8, 3;
     %delay 1, 0;
     %movi 8, 4, 3;
-    %set/v v01133260_0, 8, 3;
+    %set/v v0102EAC0_0, 8, 3;
     %delay 1, 0;
     %movi 8, 5, 3;
-    %set/v v01133260_0, 8, 3;
+    %set/v v0102EAC0_0, 8, 3;
     %delay 1, 0;
     %movi 8, 6, 3;
-    %set/v v01133260_0, 8, 3;
+    %set/v v0102EAC0_0, 8, 3;
     %delay 1, 0;
-    %set/v v01133260_0, 1, 3;
+    %set/v v0102EAC0_0, 1, 3;
     %delay 1, 0;
-    %set/v v01133260_0, 1, 3;
+    %set/v v0102EAC0_0, 1, 3;
     %end;
     .thread T_0;
 # The file index is used to find the file name in the following table.
 :file_names 4;
     "N/A";
     "<interactive>";
-    ".\is_prime_gates_tb.v";
+    "is_prime_gates_tb.v";
     "./is_prime_gates.v";

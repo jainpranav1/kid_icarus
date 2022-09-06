@@ -1,5 +1,5 @@
 $date
-	Sun Sep 04 00:31:28 2022
+	Mon Sep 05 22:57:07 2022
 $end
 $version
 	Icarus Verilog
@@ -15,11 +15,17 @@ $var wire 1 ! P $end
 $var wire 1 # a $end
 $var wire 1 $ b $end
 $var wire 1 % c $end
+$var wire 1 & d $end
+$var wire 1 ' e $end
+$var wire 1 ( f $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
+0(
+0'
+1&
 0%
 0$
 0#
@@ -31,6 +37,7 @@ $end
 b1 "
 #2
 1!
+1'
 1$
 0#
 b10 "
@@ -39,21 +46,26 @@ b10 "
 b11 "
 #4
 0!
+0&
+0'
 1%
 0$
 0#
 b100 "
 #5
 1!
+1(
 1#
 b101 "
 #6
 0!
+0(
 1$
 0#
 b110 "
 #7
 1!
+1(
 1#
 b111 "
 #8
